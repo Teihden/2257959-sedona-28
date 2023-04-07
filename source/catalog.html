@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Личный проект «Седона» от HTML Academy">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -20,16 +20,16 @@
       </button>
       <ul class="site-navigation__list menu">
         <li class="menu__item">
-          <a class="menu__link" href="index.html">Главная</a>
+          <a class="menu__link heading heading--emphasis" href="index.html">Главная</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="catalog.html">Фото и видео</a>
+          <a class="menu__link heading heading--emphasis" href="catalog.html">Фото и видео</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="form.html">Форма Отзыва</a>
+          <a class="menu__link heading heading--emphasis" href="form.html">Форма Отзыва</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="menu__link heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </li>
       </ul>
     </nav>
@@ -42,80 +42,100 @@
     </section>
 
     <section class="media">
-      <h2 class="media__heading">Фото и видео</h2>
-      <p class="media__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      <header class="media__header">
+        <h2 class="media__heading heading">Фото и видео</h2>
+        <p class="media__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      </header>
       <ul class="media__list photo">
         <li class="photo__item">
-          <a class="photo__link" href="#no_scroll">
-            <img class="photo-image" src="img/catalog/foreign-lands-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы.">
-          </a>
-          <h3 class="photo__heading">Неродные просторы</h3>
+          <figure class="photo__picture">
+            <a class="photo__link" href="#no_scroll">
+              <img class="photo__image" src="img/catalog/foreign-lands-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы.">
+            </a>
+            <figcaption class="photo__heading">Неродные просторы</figcaption>
+          </figure>
           <p class="photo__author">Автор фото: Борис</p>
-          <button class="photo__button-like" type="button">
-            <span class="visually-hidden">Нравится.</span>
-          </button>
-          <span class="photo__likes-count">1350</span>
+          <div class="photo__button-wrapper">
+            <button class="photo__button-like" type="button">
+              <span class="visually-hidden">Нравится.</span>
+            </button>
+            <span class="photo__likes-count">1350</span>
+          </div>
         </li>
         <li class="photo__item">
-          <a class="photo__link" href="#no_scroll">
-            <img class="photo-image" src="img/catalog/native-vegetation-mobile@1x.jpg" width="280" height="280" alt="Местная растительность.">
-          </a>
-          <h3 class="photo__heading">Местная растительность</h3>
+          <figure class="photo__picture">
+            <a class="photo__link" href="#no_scroll">
+              <img class="photo__image" src="img/catalog/native-vegetation-mobile@1x.jpg" width="280" height="280" alt="Местная растительность.">
+            </a>
+            <figcaption class="photo__heading">Местная растительность</figcaption>
+          </figure>
           <p class="photo__author">Автор фото: Сергей</p>
-          <button class="photo__button-like" type="button">
-            <span class="visually-hidden">Нравится.</span>
-          </button>
-          <span class="photo__likes-count">143</span>
+          <div class="photo__button-wrapper">
+            <button class="photo__button-like" type="button">
+              <span class="visually-hidden">Нравится.</span>
+            </button>
+            <span class="photo__likes-count">143</span>
+          </div>
         </li>
         <li class="photo__item">
-          <a class="photo__link" href="#no_scroll">
-            <img class="photo-image" src="img/catalog/road-to-the-north-mobile@1x.jpg" width="280" height="280" alt="Дорога на север.">
-          </a>
-          <h3 class="photo__heading">Дорога на север</h3>
+          <figure class="photo__picture">
+            <a class="photo__link" href="#no_scroll">
+              <img class="photo__image" src="img/catalog/road-to-the-north-mobile@1x.jpg" width="280" height="280" alt="Дорога на север.">
+            </a>
+            <figcaption class="photo__heading">Дорога на север</figcaption>
+          </figure>
           <p class="photo__author">Автор фото: Петр</p>
-          <button class="photo__button-like" type="button">
-            <span class="visually-hidden">Нравится.</span>
-          </button>
-          <span class="photo__likes-count">96</span>
+          <div class="photo__button-wrapper">
+            <button class="photo__button-like" type="button">
+              <span class="visually-hidden">Нравится.</span>
+            </button>
+            <span class="photo__likes-count">96</span>
+          </div>
         </li>
         <li class="photo__item">
-          <a class="photo__link" href="#no_scroll">
-            <img class="photo-image" src="img/catalog/devils-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола.">
-          </a>
-          <h3 class="photo__heading">Мост дьявола</h3>
+          <figure class="photo__picture">
+            <a class="photo__link" href="#no_scroll">
+              <img class="photo__image" src="img/catalog/devils-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола.">
+            </a>
+            <figcaption class="photo__heading">Мост дьявола</figcaption>
+          </figure>
           <p class="photo__author">Автор фото: Антон</p>
-          <button class="photo__button-like" type="button">
-            <span class="visually-hidden">Нравится.</span>
-          </button>
-          <span class="photo__likes-count">254</span>
+          <div class="photo__button-wrapper">
+            <button class="photo__button-like" type="button">
+              <span class="visually-hidden">Нравится.</span>
+            </button>
+            <span class="photo__likes-count">254</span>
+          </div>
         </li>
       </ul>
 
       <div class="media__video video">
-        <b class="video__heading">Все еще сомневаетесь?</b>
+        <b class="video__heading heading">Все еще сомневаетесь?</b>
         <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <img class="video__image" src="img/catalog/video-mobile@1x.jpg" width="280" height="177" alt="Видео о Седоне.">
+        <a class="video__link" href="@no_scroll">
+          <img class="video__image" src="img/catalog/video-mobile@1x.jpg" width="280" height="177" alt="Видео о Седоне.">
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__hashtag hashtag">
-      <a class="hashtag__link" href="https://www.instagram.com/htmlacademy">#Visitsedona</a>
+    <p class="page-footer__hashtag">
+      <a class="page-footer__hashtag-link heading heading--main" href="https://www.instagram.com/htmlacademy">#Visitsedona</a>
     </p>
     <ul class="page-footer__list socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
+        <a class="socials__link socials__link--vkontakte button" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Страница в Вконтакте.</span>
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
+        <a class="socials__link socials__link--telegram button" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Канал в Телеграме.</span>
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+        <a class="socials__link socials__link--youtube button" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Канал на Ютьюбе.</span>
         </a>
       </li>
