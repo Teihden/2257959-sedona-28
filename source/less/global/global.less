@@ -12,15 +12,20 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
+  max-width: @desktop-width;
   margin: 0 auto;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: @charcoal;
   background-color: @white;
+
+  @media (min-width: @desktop-width) {
+    box-shadow: @shadow-gray;
+  }
 }
 
 a {

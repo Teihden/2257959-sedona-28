@@ -2,15 +2,39 @@
   padding: 17px 20px 0;
   text-align: center;
   text-transform: uppercase;
+  border-top: 1px solid @titanium;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0 63px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 0 84px;
+  }
 }
 
 .video__heading {
   display: block;
   margin: 0 0 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .video__text {
-  margin: 0 8px 38px;
+  padding: 0 8px;
+  margin: 0 auto 38px;
+  max-width: 465px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 87px;
+  }
 }
 
 .video__link {

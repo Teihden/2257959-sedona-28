@@ -1,23 +1,56 @@
+.form {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .form__fieldset {
-  padding: 24px 20px 0;
+  padding: 24px 20px;
   margin: 0;
   border: none;
+  border-top: 1px solid @titanium;
 
   &--name {
     padding-bottom: 39px;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / 2;
+    }
   }
 
   &--contacts {
     padding-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 2 / 3;
+    }
   }
 
   &--impression {
-    padding-bottom: 24px;
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--emotion {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--sights {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
 .form__legend {
-  margin: 24px auto -4px;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 20px;
   text-align: center;
 }
 
@@ -31,7 +64,7 @@
 }
 
 .form__button-wrapper {
-  margin: 56px 0 22px;
+  margin: 32px 0 22px;
   padding: 0 20px;
 }
 

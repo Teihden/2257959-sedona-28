@@ -14,15 +14,34 @@
       padding: 24px 18px 28px;
     }
   }
+
+  &--compound {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+    }
+  }
+
+  &--compound-reverse {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 .reason__description {
+
   padding: 37px 18px;
 
   &--background {
     padding: 70px 18px 40px;
     background-image: url("../img/backgrounds/reason-divider.svg");
-    background-size: 100%;
+    background-size: 100% 37px;
     background-position: center top;
     background-repeat: no-repeat;
   }

@@ -18,24 +18,24 @@
       <button class="site-navigation__button-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="site-navigation__list menu">
+      <ul class="site-navigation__list menu menu menu--closed">
         <li class="menu__item">
-          <a class="menu__link heading heading--emphasis" href="index.html">Главная</a>
+          <a class="menu__link menu__link--top heading heading--emphasis" href="index.html">Главная</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link heading heading--emphasis" href="catalog.html">Фото и видео</a>
+          <a class="menu__link menu__link--current heading heading--emphasis" href="catalog.html">Фото и видео</a>
         </li>
         <li class="menu__item">
           <a class="menu__link heading heading--emphasis" href="form.html">Форма Отзыва</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="menu__link menu__link--bottom heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="page-main">
+  <main>
     <section class="hero">
       <h1 class="visually-hidden">Каталог фото и видео</h1>
       <img class="hero__image" src="img/logos/sedona-mobile.svg" width="229" height="39" alt="Sedona.">
@@ -47,7 +47,7 @@
         <p class="media__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </header>
       <ul class="media__list photo">
-        <li class="photo__item">
+        <li class="photo__item photo__item--top">
           <figure class="photo__picture">
             <a class="photo__link" href="#no_scroll">
               <img class="photo__image" src="img/catalog/foreign-lands-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы.">
@@ -55,14 +55,14 @@
             <figcaption class="photo__caption">
               <span class="photo__heading">Неродные просторы</span>
               <p class="photo__author">Автор фото: Борис</p>
+              <div class="photo__button-wrapper">
+                <button class="photo__button-like" type="button">
+                  <span class="visually-hidden">Нравится.</span>
+                </button>
+                <span class="photo__likes-count">1350</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__button-wrapper">
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Нравится.</span>
-            </button>
-            <span class="photo__likes-count">1350</span>
-          </div>
         </li>
         <li class="photo__item">
           <figure class="photo__picture">
@@ -72,14 +72,14 @@
             <figcaption class="photo__caption">
               <span class="photo__heading">Местная растительность</span>
               <p class="photo__author">Автор фото: Сергей</p>
+              <div class="photo__button-wrapper">
+                <button class="photo__button-like" type="button">
+                  <span class="visually-hidden">Нравится.</span>
+                </button>
+                <span class="photo__likes-count">143</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__button-wrapper">
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Нравится.</span>
-            </button>
-            <span class="photo__likes-count">143</span>
-          </div>
         </li>
         <li class="photo__item">
           <figure class="photo__picture">
@@ -89,14 +89,14 @@
             <figcaption class="photo__caption">
               <span class="photo__heading">Дорога на север</span>
               <p class="photo__author">Автор фото: Петр</p>
+              <div class="photo__button-wrapper">
+                <button class="photo__button-like" type="button">
+                  <span class="visually-hidden">Нравится.</span>
+                </button>
+                <span class="photo__likes-count">96</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__button-wrapper">
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Нравится.</span>
-            </button>
-            <span class="photo__likes-count">96</span>
-          </div>
         </li>
         <li class="photo__item">
           <figure class="photo__picture">
@@ -106,14 +106,14 @@
             <figcaption class="photo__caption">
               <span class="photo__heading">Мост дьявола</span>
               <p class="photo__author">Автор фото: Антон</p>
+              <div class="photo__button-wrapper">
+                <button class="photo__button-like" type="button">
+                  <span class="visually-hidden">Нравится.</span>
+                </button>
+                <span class="photo__likes-count">254</span>
+              </div>
             </figcaption>
           </figure>
-          <div class="photo__button-wrapper">
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Нравится.</span>
-            </button>
-            <span class="photo__likes-count">254</span>
-          </div>
         </li>
       </ul>
 
@@ -128,8 +128,8 @@
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__hashtag">
-      <a class="page-footer__hashtag-link heading heading--main" href="https://www.instagram.com/htmlacademy">#Visitsedona</a>
+    <p class="page-footer__hashtag hashtag">
+      <a class="hashtag__link heading heading--main" href="https://www.instagram.com/htmlacademy">#Visitsedona</a>
     </p>
     <ul class="page-footer__list socials">
       <li class="socials__item">
@@ -149,9 +149,9 @@
       </li>
     </ul>
     <p class="page-footer__copyright copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__link copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright-logo__image" src="img/logos/htmlacademy.svg" width="28" height="35" alt="Логотип HTML Academy.">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+        <img class="copyright__logo" src="img/logos/htmlacademy.svg" width="28" height="35" alt="Логотип HTML Academy.">
       </a>
     </p>
   </footer>

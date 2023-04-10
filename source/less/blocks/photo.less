@@ -1,5 +1,28 @@
+.photo {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .photo__item {
   padding: 24px 20px 25px;
+  border-top: 1px solid @titanium;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
+
+  &--top {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .photo__picture {
@@ -25,5 +48,5 @@
 }
 
 .photo__likes-count {
-  padding: 5px 0 0 14px;
+  margin: 5px 0 0 14px;
 }
