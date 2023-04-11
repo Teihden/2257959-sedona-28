@@ -4,7 +4,12 @@
 
 .staying__list {
   .list-default();
+  display: grid;
   padding: 23px 0 21px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .staying__item {

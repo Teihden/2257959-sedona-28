@@ -18,9 +18,9 @@
       <button class="site-navigation__button-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="site-navigation__list menu">
+      <ul class="site-navigation__list menu menu--closed">
         <li class="menu__item">
-          <a class="menu__link heading heading--emphasis" href="#no_scroll">Главная</a>
+          <a class="menu__link menu__link--top menu__link--current heading heading--emphasis" href="#no_scroll">Главная</a>
         </li>
         <li class="menu__item">
           <a class="menu__link heading heading--emphasis" href="catalog.html">Фото и видео</a>
@@ -29,13 +29,13 @@
           <a class="menu__link heading heading--emphasis" href="form.html">Форма Отзыва</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="menu__link menu__link--bottom heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="page-main">
+  <main>
     <section class="hero hero--main">
       <h1 class="visually-hidden">Седона</h1>
       <img class="hero__image" src="img/logos/welcome-mobile.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
@@ -48,7 +48,7 @@
       </header>
       <ol class="city__list">
         <li class="city__item city__item--compound">
-          <div class="reason reason--emphasis reason--background">
+          <div class="reason reason--emphasis reason--compound">
             <div class="reason__description reason__description--background">
               <h3 class="reason__heading heading heading--emphasis">Настоящий городок</h3>
               <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -75,7 +75,7 @@
           </section>
 
         </li>
-        <li class="city__item city__item--compound reason reason--emphasis">
+        <li class="city__item city__item--compound reason reason--emphasis reason--compound-reverse">
           <div class="reason__description">
             <h3 class="reason__heading heading heading--emphasis">Там есть мост дьявола</h3>
             <p class="reason__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -112,8 +112,8 @@
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__hashtag">
-      <a class="page-footer__hashtag-link heading heading--main" href="https://www.instagram.com/htmlacademy">#Visitsedona</a>
+    <p class="page-footer__hashtag hashtag">
+      <a class="hashtag__link heading heading--main" href="https://www.instagram.com/htmlacademy">#Visitsedona</a>
     </p>
     <ul class="page-footer__list socials">
       <li class="socials__item">
@@ -133,9 +133,9 @@
       </li>
     </ul>
     <p class="page-footer__copyright copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__link copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright-logo__image" src="img/logos/htmlacademy.svg" width="28" height="35" alt="Логотип HTML Academy.">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+        <img class="copyright__logo" src="img/logos/htmlacademy.svg" width="28" height="35" alt="Логотип HTML Academy.">
       </a>
     </p>
   </footer>

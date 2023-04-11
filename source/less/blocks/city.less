@@ -17,4 +17,17 @@
 
 .city__list {
   .list-default();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.city__item {
+  &--compound {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
+  }
 }

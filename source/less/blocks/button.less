@@ -10,4 +10,18 @@
   border: 0;
   user-select: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @sea-blue;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+    background-color: @dark-blue;
+  }
+
+  &:disabled {
+    background-color: @titanium;
+  }
 }
