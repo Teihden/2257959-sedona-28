@@ -5,7 +5,43 @@
 }
 
 .socials__link {
-  display: block;
+  display: grid;
+  place-items: center;
   height: 48px;
   width: 48px;
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    mask-size: 24px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: @white;
+  }
+
+  &--vkontakte {
+    &::after {
+      mask-image: url(../img/icons/vkontakte.svg);
+    }
+  }
+
+  &--telegram {
+    &::after {
+      mask-image: url(../img/icons/telegram.svg);
+    }
+  }
+
+  &--youtube {
+    &::after {
+      mask-image: url(../img/icons/youtube.svg);
+    }
+  }
 }

@@ -1,23 +1,40 @@
 .hero {
-  padding: 52px 0 67px;
+  padding: 52px 18px 67px;
   color: @charcoal;
   background-color: @light-blue;
   background-image:
     url("../img/backgrounds/hero-divider.svg"),
-    url("../img/backgrounds/hero-banner@1x.jpg");
+    url("../img/backgrounds/hero-banner-mobile@1x.jpg");
   background-size:
     100%,
-    cover;
+    auto;
   background-position:
     center bottom,
-    bottom left;
+    center bottom;
   background-repeat: no-repeat;
 
+  @media (min-width: @tablet-width) {
+    background-image:
+      url("../img/backgrounds/hero-divider.svg"),
+      url("../img/backgrounds/hero-banner-tablet@1x.jpg");
+  }
+
   &--main {
-    padding: 90px 0 85px;
+    padding: 90px 18px 85px;
     background-position:
       center bottom,
-      top left;
+      center;
+    background-size:
+      auto,
+      cover;
+
+    @media (min-width: @tablet-width) {
+      padding: 77px 18px 91px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 78px 18px 90px;
+    }
   }
 }
 
