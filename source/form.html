@@ -38,7 +38,11 @@
   <main>
     <section class="hero">
       <h1 class="visually-hidden">Форма отзыва</h1>
-      <img class="hero__image" src="img/logos/sedona-mobile.svg" width="229" height="39" alt="Sedona.">
+      <picture class="hero__picture">
+        <source media="(min-width: 1200px)" srcset="img/logos/sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logos/sedona-tablet.svg">
+        <img class="hero__image" src="img/logos/sedona-mobile.svg" alt="Sedona.">
+      </picture>
     </section>
 
     <section class="feedback">
@@ -68,11 +72,11 @@
         <fieldset class="form__fieldset form__fieldset--contacts">
           <legend class="form__legend heading">Контактная информация:</legend>
           <ul class="form__list">
-            <li class="form__item">
+            <li class="form__item form__item--phone">
               <label class="form__label label" for="phone">Контактный телефон*:</label>
               <input class="form__input input input--icon" id="phone" name="phone" type="tel" placeholder="Введите телефон" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--email">
               <label class="form__label label" for="email">Электронная почта*:</label>
               <input class="form__input input input--icon" id="email" name="email" type="email" placeholder="Введите e-mail" required>
             </li>
@@ -80,8 +84,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--impression">
-          <legend class="form__legend heading">Вaше общее впечатление:</legend>
-          <ul class="form__list">
+          <legend class="form__legend form__legend--impression heading">Вaше общее впечатление:</legend>
+          <ul class="form__list form__list--impression">
             <li class="form__item">
               <label class="form__label">
                 <input class="form__input input input--radio" name="impression" type="radio" value="positive" checked>
@@ -104,8 +108,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--sights">
-          <legend class="form__legend heading">Посещенные<br>достопримечательности:</legend>
-          <ul class="form__list">
+          <legend class="form__legend form__legend--sights heading">Посещенные<br>достопримечательности:</legend>
+          <ul class="form__list form__list--sights">
             <li class="form__item">
               <label class="form__label">
                 <input class="form__input input input--checkbox" name="sights" type="checkbox" value="devils-bridge" checked>
@@ -134,7 +138,7 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--emotion">
-          <legend class="form__legend heading">Опишите свои эмоции:</legend>
+          <legend class="form__legend form__legend--emotion heading">Опишите свои эмоции:</legend>
           <label class="visually-hidden" for="textarea">Впечатления</label>
           <textarea class="form__textarea input" name="textarea" id="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
@@ -180,7 +184,7 @@
 
   <section class="modal modal--closed" id="modal-failure">
     <div class="modal__failure">
-      <h2 class="modal__heading heading">Что-то пошло не так!</h2>
+      <h2 class="modal__heading heading">Что-то пошло <br class="break break--tablet">не так!</h2>
       <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__button modal__button--failure button" type="button">ОК</button>
     </div>
@@ -190,7 +194,7 @@
     <div class="modal__container">
       <div class="modal__success">
         <h2 class="modal__heading heading">Ваш отзыв отправлен!</h2>
-        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="modal__button-wrapper">
         <button class=" modal__button modal__button--success button" type="button">Закрыть окно</button>

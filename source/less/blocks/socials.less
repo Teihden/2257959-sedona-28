@@ -21,27 +21,26 @@
     display: block;
     width: 24px;
     height: 24px;
-    mask-size: 24px;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    background-color: @white;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &--vkontakte {
     &::after {
-      mask-image: url(../img/icons/vkontakte.svg);
+      background-image: url(../img/icons/vkontakte.svg);
     }
   }
 
   &--telegram {
     &::after {
-      mask-image: url(../img/icons/telegram.svg);
+      background-image: url(../img/icons/telegram.svg);
     }
   }
 
   &--youtube {
     &::after {
-      mask-image: url(../img/icons/youtube.svg);
+      background-image: url(../img/icons/youtube.svg);
     }
   }
 }

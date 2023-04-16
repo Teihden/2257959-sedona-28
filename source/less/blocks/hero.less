@@ -5,18 +5,21 @@
   background-image:
     url("../img/backgrounds/hero-divider.svg"),
     url("../img/backgrounds/hero-banner-mobile@1x.jpg");
-  background-size:
-    100%,
-    auto;
+  background-size: auto;
   background-position:
     center bottom,
     center bottom;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
+    padding: 95px 57px 117px 60px;
     background-image:
       url("../img/backgrounds/hero-divider.svg"),
       url("../img/backgrounds/hero-banner-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 101px 120px 120px 117px;
   }
 
   &--main {
