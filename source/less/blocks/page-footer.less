@@ -1,8 +1,8 @@
 .page-footer {
   display: grid;
-  gap: 17px;
+  gap: 20px;
   justify-items: center;
-  padding: 30px 18px 33px;
+  padding: 21px 18px 27px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(3, auto);
@@ -16,7 +16,7 @@
 }
 
 .page-footer__hashtag {
-  margin: 0 0 2px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     justify-self: start;
@@ -26,12 +26,17 @@
 
 .page-footer__list {
   .list-default();
+
+  @media (min-width: @tablet-width) {
+    margin-right: 9px;
+  }
 }
 
 .page-footer__copyright {
-  margin: 0;
+  margin: 3px 0 0;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     justify-self: end;
   }
 }

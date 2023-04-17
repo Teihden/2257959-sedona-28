@@ -11,14 +11,15 @@
 
 <body>
   <header class="page-header">
-    <nav class="page-header__navigation site-navigation">
+    <!-- Классы site-navigation--closed / site-navigation--opened переключают состояния меню и внешний вид кнопки. -->
+    <nav class="page-header__navigation site-navigation site-navigation--closed site-navigation--nojs">
       <a class="site-navigation__logo page-logo" href="#no_scroll">
         <img class="page-logo__image" src="img/logos/city-of-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
       <button class="site-navigation__button-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="site-navigation__list menu menu--closed">
+      <ul class="site-navigation__list menu">
         <li class="menu__item">
           <a class="menu__link menu__link--top menu__link--current heading heading--emphasis" href="#no_scroll">Главная</a>
         </li>
@@ -38,22 +39,30 @@
   <main>
     <section class="hero hero--main">
       <h1 class="visually-hidden">Седона</h1>
-      <img class="hero__image" src="img/logos/welcome-mobile.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
+      <picture class="hero__picture">
+        <source media="(min-width: 768px)" srcset="img/logos/welcome-tablet.svg">
+        <img class="hero__image" src="img/logos/welcome-mobile.svg" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
+      </picture>
     </section>
 
     <section class="city">
       <header class="city__header">
-        <h2 class="city__heading heading">Седона — небольшой городок&nbsp;в Аризоне,<br>заслуживающий большего!</h2>
+        <h2 class="city__heading heading">Седона — небольшой городок&nbsp;в Аризоне, <br>заслуживающий большего!</h2>
         <p class="city__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </header>
       <ol class="city__list">
         <li class="city__item city__item--compound">
-          <div class="reason reason--emphasis reason--compound">
+          <div class="reason reason--compound">
             <div class="reason__description reason__description--background">
-              <h3 class="reason__heading heading heading--emphasis">Настоящий городок</h3>
+              <h3 class="reason__heading heading heading--emphasis">Настоящий <br class="break break--tablet">городок
+              </h3>
               <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="reason__image" src="img/index/city-mobile@1x.jpg" width="320" height="260" alt="Вид на город Седона.">
+            <picture class="reason__picture">
+              <source media="(min-width: 1200px)" srcset="img/index/city-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/index/city-tablet@1x.jpg">
+              <img class="reason__image" src="img/index/city-mobile@1x.jpg" alt="Вид на город Седона.">
+            </picture>
           </div>
 
           <section class="city__insert staying">
@@ -63,35 +72,39 @@
                 <h4 class="staying__heading heading">Жилье</h4>
                 <p class="staying__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
-              <li class="staying__item staying__food">
-                <h4 class="staying__heading heading">Еда</h4>
-                <p class="staying__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <li class="staying__item staying__item--food">
+                <h4 class="staying__heading staying__heading--food heading">Еда</h4>
+                <p class="staying__text">Всегда заказывайте фирменный бургер, <br class="break break--tablet">вы не разочаруетесь!</p>
               </li>
-              <li class="staying__item staying__souvenirs">
-                <h4 class="staying__heading heading">Сувениры</h4>
-                <p class="staying__text">Не только китайского, но и местного производства!</p>
+              <li class="staying__item staying__item--souvenir">
+                <h4 class="staying__heading staying__heading--souvenir heading">Сувениры</h4>
+                <p class="staying__text">Не только китайского, <br class="break break--tablet">но и местного производства!</p>
               </li>
             </ul>
           </section>
 
         </li>
-        <li class="city__item city__item--compound reason reason--emphasis reason--compound-reverse">
+        <li class="city__item city__item--compound reason reason--compound">
           <div class="reason__description">
-            <h3 class="reason__heading heading heading--emphasis">Там есть мост дьявола</h3>
-            <p class="reason__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <h3 class="reason__heading heading heading--emphasis">Там есть <br class="break break--tablet">мост дьявола</h3>
+            <p class="reason__text">Да, по нему можно пройти! <br class="break break--desktop">Если вы осмелитесь, конечно</p>
           </div>
-          <img class="reason__image" src="img/index/devils-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост дьявола.">
+          <picture class="reason__picture reason__picture--reverse">
+            <source media="(min-width: 1200px)" srcset="img/index/devils-bridge-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/index/devils-bridge-tablet@1x.jpg">
+            <img class="reason__image" src="img/index/devils-bridge-mobile@1x.jpg" alt="Мост дьявола.">
+          </picture>
         </li>
         <li class="city__item reason reason--secondary">
-          <h3 class="reason__heading heading">Небольшая площадь</h3>
+          <h3 class="reason__heading heading">Небольшая <br class="break break--tablet">площадь</h3>
           <p class="reason__text">Все интересные места находятся очень близко</p>
         </li>
         <li class="city__item reason reason--secondary">
-          <h3 class="reason__heading heading">Красивая дорога</h3>
-          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <h3 class="reason__heading heading">Красивая <br class="break break--tablet">дорога</h3>
+          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем <br class="break break--tablet">не скучно!</p>
         </li>
         <li class="city__item reason reason--secondary">
-          <h3 class="reason__heading heading">Мало туристов</h3>
+          <h3 class="reason__heading heading">Мало <br class="break break--tablet">туристов</h3>
           <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ol>
@@ -100,14 +113,24 @@
     <section class="search">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
       <b class="search__heading heading heading--main">Заинтересовались?</b>
-      <p class="search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="search__text">Укажите предполагаемые даты поездки, <br class="break break--tablet">и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="search__button button" href="#no_scroll">Найти Гостиницу</a>
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-      <!-- Интерактивная-карта. -->
-      <img class="map__image" src="img/index/map-mobile@1x.png" width="320" height="350" alt="Карта.">
+      <picture class="map__picture">
+        <source media="(min-width: 1200px)" srcset="img/index/map-desktop@1x.png">
+        <source media="(min-width: 768px)" srcset="img/index/map-tablet@1x.png">
+        <img class="map__image" src="img/index/map-mobile@1x.png" alt="Расположение Седоны на карте.">
+      </picture>
+      <iframe
+        class="map__frame"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc9faac341f7010fb622578c0d3dfab8e77c5ac05ceb2f1fe3e7e3142d7ec60d&amp;source=constructor"
+        allow="fullscreen"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Расположение Седоны на карте."
+      ></iframe>
     </section>
   </main>
 
@@ -135,10 +158,13 @@
     <p class="page-footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
-        <img class="copyright__logo" src="img/logos/htmlacademy.svg" width="28" height="35" alt="Логотип HTML Academy.">
+        <svg class="copyright__logo" width="28" height="35" viewBox="0 0 28 35" fill="currentColor" role="img" aria-label="Логотип HTML Academy.">
+          <path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
+        </svg>
       </a>
     </p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

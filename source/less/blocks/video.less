@@ -5,12 +5,12 @@
   border-top: 1px solid @titanium;
 
   @media (min-width: @tablet-width) {
-    padding: 40px 0 63px;
+    padding: 62px 0 40px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 62px 0 84px;
+    padding: 61px 0 85px;
   }
 }
 
@@ -20,16 +20,17 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+    margin: 0 0 30px;
   }
 }
 
 .video__text {
   padding: 0 8px;
-  margin: 0 auto 38px;
+  margin: 0 auto 39px;
   max-width: 465px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto 90px;
+    margin: 0 auto 85px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,6 +38,39 @@
   }
 }
 
-.video__link {
+.video__picture {
+  position: relative;
   display: block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 48px;
+    height: 54px;
+    background-image: url("../img/icons/play.svg");
+    background-color: transparent;
+    background-size: 48px 54px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.video__image {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  max-width: 648px;
+  margin: 0 auto;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 500px;
+    max-width: 800px;
+  }
 }

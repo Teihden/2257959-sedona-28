@@ -11,14 +11,14 @@
 
 <body>
   <header class="page-header">
-    <nav class="page-header__navigation site-navigation">
+    <nav class="page-header__navigation site-navigation site-navigation--closed site-navigation--nojs">
       <a class="site-navigation__logo page-logo" href="index.html">
         <img class="page-logo__image" src="img/logos/city-of-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
       <button class="site-navigation__button-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="site-navigation__list menu menu--closed">
+      <ul class="site-navigation__list menu">
         <li class="menu__item">
           <a class="menu__link menu__link--top heading heading--emphasis" href="index.html">Главная</a>
         </li>
@@ -38,7 +38,11 @@
   <main>
     <section class="hero">
       <h1 class="visually-hidden">Форма отзыва</h1>
-      <img class="hero__image" src="img/logos/sedona-mobile.svg" width="229" height="39" alt="Sedona.">
+      <picture class="hero__picture">
+        <source media="(min-width: 1200px)" srcset="img/logos/sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logos/sedona-tablet.svg">
+        <img class="hero__image" src="img/logos/sedona-mobile.svg" alt="Sedona.">
+      </picture>
     </section>
 
     <section class="feedback">
@@ -68,11 +72,11 @@
         <fieldset class="form__fieldset form__fieldset--contacts">
           <legend class="form__legend heading">Контактная информация:</legend>
           <ul class="form__list">
-            <li class="form__item">
+            <li class="form__item form__item--phone">
               <label class="form__label label" for="phone">Контактный телефон*:</label>
               <input class="form__input input input--icon" id="phone" name="phone" type="tel" placeholder="Введите телефон" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--email">
               <label class="form__label label" for="email">Электронная почта*:</label>
               <input class="form__input input input--icon" id="email" name="email" type="email" placeholder="Введите e-mail" required>
             </li>
@@ -80,8 +84,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--impression">
-          <legend class="form__legend heading">Вaше общее впечатление:</legend>
-          <ul class="form__list">
+          <legend class="form__legend form__legend--impression heading">Вaше общее впечатление:</legend>
+          <ul class="form__list form__list--impression">
             <li class="form__item">
               <label class="form__label">
                 <input class="form__input input input--radio" name="impression" type="radio" value="positive" checked>
@@ -104,8 +108,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--sights">
-          <legend class="form__legend heading">Посещенные<br>достопримечательности:</legend>
-          <ul class="form__list">
+          <legend class="form__legend form__legend--sights heading">Посещенные<br>достопримечательности:</legend>
+          <ul class="form__list form__list--sights">
             <li class="form__item">
               <label class="form__label">
                 <input class="form__input input input--checkbox" name="sights" type="checkbox" value="devils-bridge" checked>
@@ -134,9 +138,9 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--emotion">
-          <legend class="form__legend heading">Опишите свои эмоции:</legend>
+          <legend class="form__legend form__legend--emotion heading">Опишите свои эмоции:</legend>
           <label class="visually-hidden" for="textarea">Впечатления</label>
-          <textarea class="form__textarea input" name="textarea" id="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="form__textarea input input--text" name="textarea" id="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
         <div class="form__button-wrapper">
@@ -171,14 +175,16 @@
     <p class="page-footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
-        <img class="copyright__logo" src="img/logos/htmlacademy.svg" width="28" height="35" alt="Логотип HTML Academy.">
+        <svg class="copyright__logo" width="28" height="35" viewBox="0 0 28 35" fill="currentColor" role="img" aria-label="Логотип HTML Academy.">
+          <path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
+        </svg>
       </a>
     </p>
   </footer>
 
   <section class="modal modal--closed" id="modal-failure">
     <div class="modal__failure">
-      <h2 class="modal__heading heading">Что-то пошло не так!</h2>
+      <h2 class="modal__heading heading">Что-то пошло <br class="break break--tablet">не так!</h2>
       <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__button modal__button--failure button" type="button">ОК</button>
     </div>
@@ -188,14 +194,14 @@
     <div class="modal__container">
       <div class="modal__success">
         <h2 class="modal__heading heading">Ваш отзыв отправлен!</h2>
-        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="modal__button-wrapper">
         <button class=" modal__button modal__button--success button" type="button">Закрыть окно</button>
       </div>
     </div>
   </section>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
