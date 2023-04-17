@@ -1,4 +1,8 @@
 .photo {
+  // display: flex; //
+  // flex-wrap: wrap; //
+  // flex-direction: row; //
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,7 +14,8 @@
 }
 
 .photo__item {
-  padding: 24px 20px 25px;
+  // flex-basis: 383px; //
+  padding: 25px 20px;
   border-top: 1px solid @titanium;
 
   @media (min-width: @tablet-width) {
@@ -19,34 +24,138 @@
   }
 
   &--top {
+    // flex-grow: 1; //
+    // flex-basis: auto; //
+
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
     }
   }
 }
 
-.photo__picture {
+.photo__figure {
+  position: relative;
   margin: 0;
+}
+
+.photo__link {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.photo__picture {
+  display: block;
 }
 
 .photo__image {
   display: block;
-  margin-bottom: 15px;
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 267px;
+  }
+
+  &--top {
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
+  }
 }
 
 .photo__caption {
-  margin: 0 0 11px;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    padding: 0 20px 0;
+    background-color: @white-smoke;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: @white;
+    background-color: rgba(@black, 0.3);
+  }
+
+  &--secondary {
+    @media (min-width: @desktop-width) {
+      padding: 0 20px 0 25px;
+    }
+  }
 }
 
 .photo__heading {
   font-weight: 700;
   text-transform: uppercase;
+  margin: 14px 0 1px;
+
+  @media (min-width: @tablet-width) {
+    margin: 21px 0 1px;
+  }
+
+  &--secondary {
+    @media (min-width: @desktop-width) {
+      margin: 17px 0 5px;
+    }
+  }
 }
 
 .photo__author {
-  margin: 0;
+  margin: 0 0 11px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 16px;
+  }
+}
+
+.photo__button-wrapper {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    grid-area: 1 / 2 / -1 / -1;
+    align-self: center;
+  }
+}
+
+.photo__button-like {
+  display: block;
+  width: 23px;
+  height: 21px;
+  padding: 0;
+  color: rgba(@black, 0.3);
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: @desktop-width) {
+    color: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .photo__likes-count {
   margin: 5px 0 0 14px;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    margin: 4px 0 0 9px;
+  }
 }

@@ -14,7 +14,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 18px;
       bottom: 0;
@@ -23,17 +23,13 @@
       background-color: @light-gray;
 
       @media (min-width: @tablet-width) {
-        display: none
+        display: none;
       }
     }
 
     &:last-child {
       padding: 24px 32px 30px;
       border-bottom: none;
-
-      &::after {
-        display: none;
-      }
 
       @media (min-width: @tablet-width) {
         padding: 41px 33px 43px;
@@ -42,6 +38,10 @@
       @media (min-width: @desktop-width) {
         padding: 52px 50px 53px;
       }
+    }
+
+    &:last-child::after {
+      display: none;
     }
   }
 

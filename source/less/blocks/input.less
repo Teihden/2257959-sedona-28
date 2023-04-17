@@ -7,6 +7,11 @@
   border: none;
   background-color: @white-smoke;
 
+  &:hover,
+  &:focus {
+    background-color: @titanium;
+  }
+
   &::placeholder {
     font-family: inherit;
     font-weight: 700;
@@ -19,11 +24,23 @@
   &--text {
     width: 100%;
     padding: 16px;
+
+    &:focus:not(:placeholder-shown) {
+      outline: 4px solid @titanium;
+      outline-offset: -4px;
+      background-color: @white;
+    }
   }
 
   &--icon {
     width: 100%;
     padding: 16px 74px 16px 16px;
+
+    &:focus:not(:placeholder-shown) {
+      outline: 4px solid @titanium;
+      outline-offset: -4px;
+      background-color: @white;
+    }
   }
 
   &--radio {
@@ -35,24 +52,26 @@
     border-radius: 50%;
     appearance: none;
 
-    &:checked {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: @charcoal;
-        background-size: 16px;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    &:active {
+      background-color: @alto;
+    }
+
+    &:checked::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: @charcoal;
+      background-size: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 
@@ -63,6 +82,10 @@
     background-color: @white-smoke;
     border-radius: 4px;
     appearance: none;
+
+    &:active {
+      background-color: @alto;
+    }
 
     &:checked {
       background-image: url("../img/icons/tick.svg");
