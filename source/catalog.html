@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Личный проект «Седона» от HTML Academy">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -20,7 +25,7 @@
       </button>
       <ul class="site-navigation__list menu menu">
         <li class="menu__item">
-          <a class="menu__link menu__link--top heading heading--emphasis" href="index.html">Главная</a>
+          <a class="menu__link heading heading--emphasis" href="index.html">Главная</a>
         </li>
         <li class="menu__item">
           <a class="menu__link menu__link--current heading heading--emphasis" href="catalog.html">Фото и видео</a>
@@ -29,7 +34,7 @@
           <a class="menu__link heading heading--emphasis" href="form.html">Форма Отзыва</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link menu__link--bottom heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="menu__link heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </li>
       </ul>
     </nav>
@@ -38,7 +43,7 @@
   <main>
     <section class="hero">
       <h1 class="visually-hidden">Каталог фото и видео</h1>
-      <picture class="hero__picture">
+      <picture>
         <source media="(min-width: 1200px)" srcset="img/logos/sedona-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logos/sedona-tablet.svg">
         <img class="hero__image" src="img/logos/sedona-mobile.svg" alt="Sedona.">
@@ -54,9 +59,10 @@
         <li class="photo__item photo__item--top">
           <figure class="photo__figure">
             <a class="photo__link" href="#no_scroll">
-              <picture class="photo__picture">
-                <source media="(min-width: 768px)" srcset="img/catalog/foreign-lands-tablet@1x.jpg">
-                <img class="photo__image photo__image--top" src="img/catalog/foreign-lands-mobile@1x.jpg" alt="Неродные просторы.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/catalog/foreign-lands-desktop@1x.jpg 1x, img/catalog/foreign-lands-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/foreign-lands-tablet@1x.jpg 1x, img/catalog/foreign-lands-tablet@2x.jpg 2x">
+                <img class="photo__image photo__image--top" src="img/catalog/foreign-lands-mobile@1x.jpg" srcset="img/catalog/foreign-lands-mobile@2x.jpg 2x" alt="Неродные просторы.">
               </picture>
             </a>
             <figcaption class="photo__caption">
@@ -77,9 +83,10 @@
         <li class="photo__item">
           <figure class="photo__figure">
             <a class="photo__link" href="#no_scroll">
-              <picture class="photo__picture">
-                <source media="(min-width: 768px)" srcset="img/catalog/native-vegetation-tablet@1x.jpg">
-                <img class="photo__image" src="img/catalog/native-vegetation-mobile@1x.jpg" alt="Местная растительность.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/catalog/native-vegetation-desktop@1x.jpg 1x, img/catalog/native-vegetation-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/native-vegetation-tablet@1x.jpg 1x, img/catalog/native-vegetation-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/catalog/native-vegetation-mobile@1x.jpg" srcset="img/catalog/native-vegetation-mobile@2x.jpg 2x" alt="Местная растительность.">
               </picture>
             </a>
             <figcaption class="photo__caption photo__caption--secondary">
@@ -100,9 +107,10 @@
         <li class="photo__item">
           <figure class="photo__figure">
             <a class="photo__link" href="#no_scroll">
-              <picture class="photo__picture">
-                <source media="(min-width: 768px)" srcset="img/catalog/road-to-the-north-tablet@1x.jpg">
-                <img class="photo__image" src="img/catalog/road-to-the-north-mobile@1x.jpg" alt="Дорога на север.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/catalog/road-to-the-north-desktop@1x.jpg 1x, img/catalog/road-to-the-north-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/road-to-the-north-tablet@1x.jpg 1x, img/catalog/road-to-the-north-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/catalog/road-to-the-north-mobile@1x.jpg" srcset="img/catalog/road-to-the-north-mobile@2x.jpg 2x" alt="Дорога на север.">
               </picture>
             </a>
             <figcaption class="photo__caption photo__caption--secondary">
@@ -123,9 +131,10 @@
         <li class="photo__item">
           <figure class="photo__figure">
             <a class="photo__link" href="#no_scroll">
-              <picture class="photo__picture">
-                <source media="(min-width: 768px)" srcset="img/catalog/devils-bridge-tablet@1x.jpg">
-                <img class="photo__image" src="img/catalog/devils-bridge-mobile@1x.jpg" alt="Мост дьявола.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/catalog/devils-bridge-desktop@1x.jpg 1x, img/catalog/devils-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/devils-bridge-tablet@1x.jpg 1x, img/catalog/devils-bridge-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/catalog/devils-bridge-mobile@1x.jpg" srcset="img/catalog/devils-bridge-mobile@2x.jpg 2x" alt="Мост дьявола.">
               </picture>
             </a>
             <figcaption class="photo__caption photo__caption--secondary">
@@ -149,8 +158,9 @@
         <b class="video__heading heading">Все еще сомневаетесь?</b>
         <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <picture class="video__picture">
-          <source media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.jpg">
-          <img class="video__image" src="img/catalog/video-mobile@1x.jpg" alt="Видео о Седоне.">
+          <source media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.jpg 1x, img/catalog/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.jpg 1x, img/catalog/video-tablet@2x.jpg 2x">
+          <img class="video__image" src="img/catalog/video-mobile@1x.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" alt="Видео о Седоне.">
         </picture>
       </div>
     </section>

@@ -11,11 +11,29 @@
     center bottom;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/backgrounds/hero-divider.svg"),
+      url("../img/backgrounds/hero-banner-mobile@2x.jpg");
+    background-size:
+      auto,
+      auto 389px;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 95px 57px 117px 60px;
     background-image:
       url("../img/backgrounds/hero-divider.svg"),
       url("../img/backgrounds/hero-banner-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/backgrounds/hero-divider.svg"),
+        url("../img/backgrounds/hero-banner-tablet@2x.jpg");
+      background-size:
+        auto,
+        auto 518px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -32,11 +50,17 @@
       cover;
 
     @media (min-width: @tablet-width) {
-      padding: 77px 18px 91px;
+      padding: 77px 19px 91px 18px;
+      background-size:
+        auto,
+        cover;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       padding: 78px 18px 90px;
+      background-size:
+        auto,
+        cover;
     }
   }
 }
@@ -44,4 +68,11 @@
 .hero__image {
   display: block;
   margin: 0 auto;
+
+  &--main {
+    @media (min-width: @tablet-width) {
+      width: 461px;
+      height: 350px;
+    }
+  }
 }

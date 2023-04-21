@@ -36,6 +36,10 @@
     width: 100%;
     padding: 16px 74px 16px 16px;
 
+    &:focus {
+      outline-offset: 1px;
+    }
+
     &:focus:not(:placeholder-shown) {
       outline: 4px solid @titanium;
       outline-offset: -4px;

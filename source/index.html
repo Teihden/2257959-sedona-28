@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Личный проект «Седона» от HTML Academy">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -21,7 +26,7 @@
       </button>
       <ul class="site-navigation__list menu">
         <li class="menu__item">
-          <a class="menu__link menu__link--top menu__link--current heading heading--emphasis" href="#no_scroll">Главная</a>
+          <a class="menu__link menu__link--current heading heading--emphasis" href="#no_scroll">Главная</a>
         </li>
         <li class="menu__item">
           <a class="menu__link heading heading--emphasis" href="catalog.html">Фото и видео</a>
@@ -30,7 +35,7 @@
           <a class="menu__link heading heading--emphasis" href="form.html">Форма Отзыва</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link menu__link--bottom heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="menu__link heading heading--emphasis" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </li>
       </ul>
     </nav>
@@ -39,10 +44,7 @@
   <main>
     <section class="hero hero--main">
       <h1 class="visually-hidden">Седона</h1>
-      <picture class="hero__picture">
-        <source media="(min-width: 768px)" srcset="img/logos/welcome-tablet.svg">
-        <img class="hero__image" src="img/logos/welcome-mobile.svg" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
-      </picture>
+        <img class="hero__image hero__image--main" src="img/logos/welcome.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
     </section>
 
     <section class="city">
@@ -58,10 +60,10 @@
               </h3>
               <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <picture class="reason__picture">
-              <source media="(min-width: 1200px)" srcset="img/index/city-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="img/index/city-tablet@1x.jpg">
-              <img class="reason__image" src="img/index/city-mobile@1x.jpg" alt="Вид на город Седона.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/index/city-desktop@1x.jpg 1x, img/index/city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/index/city-tablet@1x.jpg 1x,img/index/city-tablet@2x.jpg 2x">
+              <img class="reason__image" src="img/index/city-mobile@1x.jpg" srcset="img/index/city-mobile@2x.jpg 2x" alt="Вид на город Седона.">
             </picture>
           </div>
 
@@ -84,15 +86,15 @@
           </section>
 
         </li>
-        <li class="city__item city__item--compound reason reason--compound">
-          <div class="reason__description">
+        <li class="city__item city__item--compound reason reason--compound reason--reverse">
+          <div class="reason__description reason__description--order">
             <h3 class="reason__heading heading heading--emphasis">Там есть <br class="break break--tablet">мост дьявола</h3>
             <p class="reason__text">Да, по нему можно пройти! <br class="break break--desktop">Если вы осмелитесь, конечно</p>
           </div>
-          <picture class="reason__picture reason__picture--reverse">
-            <source media="(min-width: 1200px)" srcset="img/index/devils-bridge-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/index/devils-bridge-tablet@1x.jpg">
-            <img class="reason__image" src="img/index/devils-bridge-mobile@1x.jpg" alt="Мост дьявола.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/index/devils-bridge-desktop@1x.jpg 1x, img/index/devils-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index/devils-bridge-tablet@1x.jpg 1x, img/index/devils-bridge-tablet@2x.jpg 2x">
+            <img class="reason__image" src="img/index/devils-bridge-mobile@1x.jpg" srcset="img/index/devils-bridge-mobile@2x.jpg 2x" alt="Мост дьявола.">
           </picture>
         </li>
         <li class="city__item reason reason--secondary">
@@ -119,18 +121,13 @@
 
     <section class="map">
       <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-      <picture class="map__picture">
-        <source media="(min-width: 1200px)" srcset="img/index/map-desktop@1x.png">
-        <source media="(min-width: 768px)" srcset="img/index/map-tablet@1x.png">
-        <img class="map__image" src="img/index/map-mobile@1x.png" alt="Расположение Седоны на карте.">
-      </picture>
       <iframe
-        class="map__frame"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc9faac341f7010fb622578c0d3dfab8e77c5ac05ceb2f1fe3e7e3142d7ec60d&amp;source=constructor"
-        allow="fullscreen"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Расположение Седоны на карте."
-      ></iframe>
+      class="map__frame"
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc9faac341f7010fb622578c0d3dfab8e77c5ac05ceb2f1fe3e7e3142d7ec60d&amp;source=constructor"
+      allow="fullscreen"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Расположение Седоны на карте.">
+      </iframe>
     </section>
   </main>
 
