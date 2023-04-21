@@ -19,11 +19,36 @@
   @media (min-width: @desktop-width) {
     padding: 0 32px;
   }
+
+  &:first-child {
+    .menu__link {
+      box-shadow: @shadow-black;
+
+      @media (min-width: @tablet-width) {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:last-child {
+    .menu__link {
+      box-shadow: @shadow-white;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      background-size: 100% 7px;
+      background-position: bottom;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        box-shadow: none;
+        background-image: none;
+      }
+    }
+  }
 }
 
 .menu__link {
   display: block;
-  padding: 17px 18px 12px;
+  padding: 17px 60px 12px;
   box-shadow:
     @shadow-black,
     @shadow-white;
@@ -70,27 +95,6 @@
       &:active {
         color: @pine-cone;
       }
-    }
-  }
-
-  &--top {
-    box-shadow: @shadow-black;
-
-    @media (min-width: @tablet-width) {
-      box-shadow: none;
-    }
-  }
-
-  &--bottom {
-    box-shadow: @shadow-white;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-    background-size: 100% 7px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      box-shadow: none;
-      background-image: none;
     }
   }
 }
