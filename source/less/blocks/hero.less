@@ -3,36 +3,65 @@
   color: @charcoal;
   background-color: @light-blue;
   background-image:
-    url("../img/backgrounds/hero-divider.svg"),
+    url("../img/stack.svg#hero-divider"),
     url("../img/backgrounds/hero-banner-mobile@1x.jpg");
-  background-size: auto;
+  background-size: 1200px 57px,
+    auto;
   background-position:
     center bottom,
     center bottom;
   background-repeat: no-repeat;
 
+  @supports (background-image: image-set(url(""))) {
+    background-image:
+      url("../img/stack.svg#hero-divider"),
+      image-set("../img/backgrounds/hero-banner-mobile@1x.webp" type("image/webp"),
+        "../img/backgrounds/hero-banner-mobile@1x.jpg" type("image/jpeg"));
+  }
+
   @media (min-resolution: 2dppx) {
     background-image:
-      url("../img/backgrounds/hero-divider.svg"),
+      url("../img/stack.svg#hero-divider"),
       url("../img/backgrounds/hero-banner-mobile@2x.jpg");
     background-size:
-      auto,
+      1200px 57px,
       auto 389px;
+
+    @supports (background-image: image-set(url(""))) {
+      background-image:
+        url("../img/stack.svg#hero-divider"),
+        image-set("../img/backgrounds/hero-banner-mobile@2x.webp" type("image/webp"),
+          "../img/backgrounds/hero-banner-mobile@2x.jpg" type("image/jpeg"));
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding: 95px 57px 117px 60px;
     background-image:
-      url("../img/backgrounds/hero-divider.svg"),
+      url("../img/stack.svg#hero-divider"),
       url("../img/backgrounds/hero-banner-tablet@1x.jpg");
+
+    @supports (background-image: image-set(url(""))) {
+      background-image:
+        url("../img/stack.svg#hero-divider"),
+        image-set("../img/backgrounds/hero-banner-tablet@1x.webp" type("image/webp"),
+          "../img/backgrounds/hero-banner-tablet@1x.jpg" type("image/jpeg"));
+    }
 
     @media (min-resolution: 2dppx) {
       background-image:
-        url("../img/backgrounds/hero-divider.svg"),
+        url("../img/stack.svg#hero-divider"),
         url("../img/backgrounds/hero-banner-tablet@2x.jpg");
       background-size:
-        auto,
+        1200px 57px,
         auto 518px;
+
+      @supports (background-image: image-set(url(""))) {
+        background-image:
+          url("../img/stack.svg#hero-divider"),
+          image-set("../img/backgrounds/hero-banner-tablet@2x.webp" type("image/webp"),
+            "../img/backgrounds/hero-banner-tablet@2x.jpg" type("image/jpeg"));
+      }
     }
   }
 
@@ -46,21 +75,15 @@
       center bottom,
       center;
     background-size:
-      auto,
+      1200px 57px,
       cover;
 
     @media (min-width: @tablet-width) {
       padding: 77px 19px 91px 18px;
-      background-size:
-        auto,
-        cover;
     }
 
     @media (min-width: @desktop-width) {
       padding: 78px 18px 90px;
-      background-size:
-        auto,
-        cover;
     }
   }
 }
@@ -68,8 +91,23 @@
 .hero__image {
   display: block;
   margin: 0 auto;
+  width: 230px;
+  height: 39px;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+    height: 80px;
+  }
 
   &--main {
+    width: 282px;
+    height: 214px;
+
     @media (min-width: @tablet-width) {
       width: 461px;
       height: 350px;

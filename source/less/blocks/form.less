@@ -187,9 +187,9 @@
       display: block;
       width: 58px;
       height: 58px;
-      background-image: url("../img/icons/phone.svg");
+      background-image: url("../img/stack.svg#phone");
       background-color: @mercury;
-      background-size: 18px;
+      background-size: 18px 18px;
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -204,9 +204,9 @@
       display: block;
       width: 58px;
       height: 58px;
-      background-image: url("../img/icons/email.svg");
+      background-image: url("../img/stack.svg#email");
       background-color: @mercury;
-      background-size: 18px;
+      background-size: 18px 18px;
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -219,7 +219,6 @@
 
 .form__label {
   display: flex;
-  align-items: center;
 }
 
 .form__textarea {
@@ -250,6 +249,10 @@
   @media (min-width: @desktop-width) {
     padding: 0 96px 64px;
   }
+}
+
+.form__option {
+  margin-top: 10px;
 }
 
 .form__button {

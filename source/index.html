@@ -44,7 +44,7 @@
   <main>
     <section class="hero hero--main">
       <h1 class="visually-hidden">Седона</h1>
-        <img class="hero__image hero__image--main" src="img/logos/welcome.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
+      <img class="hero__image hero__image--main" src="img/logos/welcome.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
     </section>
 
     <section class="city">
@@ -60,7 +60,11 @@
               </h3>
               <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <picture>
+            <picture class="reason__picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/index/city-desktop@1x.webp 1x, img/index/city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index/city-tablet@1x.webp 1x, img/index/city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/city-mobile@1x.webp 1x, img/index/city-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/index/city-desktop@1x.jpg 1x, img/index/city-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/index/city-tablet@1x.jpg 1x,img/index/city-tablet@2x.jpg 2x">
               <img class="reason__image" src="img/index/city-mobile@1x.jpg" srcset="img/index/city-mobile@2x.jpg 2x" alt="Вид на город Седона.">
@@ -91,7 +95,7 @@
             <h3 class="reason__heading heading heading--emphasis">Там есть <br class="break break--tablet">мост дьявола</h3>
             <p class="reason__text">Да, по нему можно пройти! <br class="break break--desktop">Если вы осмелитесь, конечно</p>
           </div>
-          <picture>
+          <picture class="reason__picture">
             <source media="(min-width: 1200px)" srcset="img/index/devils-bridge-desktop@1x.jpg 1x, img/index/devils-bridge-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/index/devils-bridge-tablet@1x.jpg 1x, img/index/devils-bridge-tablet@2x.jpg 2x">
             <img class="reason__image" src="img/index/devils-bridge-mobile@1x.jpg" srcset="img/index/devils-bridge-mobile@2x.jpg 2x" alt="Мост дьявола.">
@@ -121,12 +125,14 @@
 
     <section class="map">
       <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-      <iframe
-      class="map__frame"
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc9faac341f7010fb622578c0d3dfab8e77c5ac05ceb2f1fe3e7e3142d7ec60d&amp;source=constructor"
-      allow="fullscreen"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Расположение Седоны на карте.">
+      <noscript>
+        <picture class="map__picture">
+          <source media="(min-width: 1200px)" srcset="img/index/map-desktop@1x.png 1x, img/index/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index/map-tablet@1x.png 1x, img/index/map-tablet@2x.png 2x">
+          <img class="map__image" src="img/index/map-mobile@1x.png" srcset="img/index/map-mobile@2x.png 2x" alt="Расположение Седоны на карте.">
+        </picture>
+      </noscript>
+      <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc9faac341f7010fb622578c0d3dfab8e77c5ac05ceb2f1fe3e7e3142d7ec60d&amp;source=constructor" allow="fullscreen" referrerpolicy="no-referrer-when-downgrade" title="Расположение Седоны на карте.">
       </iframe>
     </section>
   </main>
@@ -153,9 +159,9 @@
       </li>
     </ul>
     <p class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
         <span class="copyright__text">Разработано</span>
-        <svg class="copyright__logo" width="28" height="35" viewBox="0 0 28 35" fill="currentColor" role="img" aria-label="Логотип HTML Academy.">
+        <svg class="copyright__logo" width="28" height="35" viewBox="0 0 28 35" fill="currentColor" role="img">
           <path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
         </svg>
       </a>

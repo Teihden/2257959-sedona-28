@@ -6,6 +6,7 @@
   .list-default();
   display: grid;
   padding: 23px 0 21px;
+  align-items: start;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(3, 1fr);
@@ -20,14 +21,14 @@
   padding: 0 18px 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 60px 33px 61px;
+    padding: 53px 33px 61px;
     grid-template: repeat(3, auto) / auto;
     text-align: center;
     width: auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 69px 50px 68px;
+    padding: 62px 50px 68px;
   }
 
   &::before {
@@ -36,78 +37,62 @@
     grid-area: 1 / 1 / 3 / 2;
     width: 40px;
     height: 40px;
-    background-size: 40px;
+    background-size: 40px 40px;
     background-position: center;
     background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
       grid-area: auto;
       justify-self: center;
+      width: 85px;
+      height: 85px;
     }
   }
 
   &--accomodation {
     &::before {
-      background-image: url("../img/icons/accomodation-mobile.svg");
+      background-image: url("../img/stack.svg#accomodation");
 
       @media (min-width: @tablet-width) {
-        width: 77px;
-        height: 72px;
-        background-image: url("../img/icons/accomodation-tablet.svg");
-        background-size: 77px 72px;
-        margin: 0 3px 26px 0;
+        background-size: 80px 78px;
+        margin: 0 2px 20px 0;
       }
 
       @media (min-width: @desktop-width) {
-        width: 80px;
-        height: 73px;
-        background-image: url("../img/icons/accomodation-desktop.svg");
-        background-size: 80px 73px;
-        margin: 0 2px 27px 0;
+        background-size: 80px 80px;
+        margin: 0 2px 22px 0;
       }
     }
   }
 
   &--food {
     &::before {
-      background-image: url("../img/icons/food-mobile.svg");
+      background-image: url("../img/stack.svg#food");
 
       @media (min-width: @tablet-width) {
-        width: 80px;
-        height: 68px;
-        background-image: url("../img/icons/food-tablet.svg");
-        background-size: 80px 68px;
-        margin: 2px 3px 26px 0;
+        background-size: 82px 79px;
+        margin: 0 3px 18px 0;
       }
 
       @media (min-width: @desktop-width) {
-        width: 74px;
-        height: 69px;
-        background-image: url("../img/icons/food-desktop.svg");
-        background-size: 73px 69px;
-        margin: 3px 4px 21px 0;
+        background-size: 74px 79px;
+        margin: 2px 4px 17px 0;
       }
     }
   }
 
   &--souvenir {
     &::before {
-      background-image: url("../img/icons/souvenir-mobile.svg");
+      background-image: url("../img/stack.svg#souvenir");
 
       @media (min-width: @tablet-width) {
-        width: 66px;
-        height: 75px;
-        background-image: url("../img/icons/souvenir-tablet.svg");
-        background-size: 66px 75px;
-        margin: 4px 0 10px 5px;
+        background-size: 82px 80px;
+        margin: 5px 0 10px 5px;
       }
 
       @media (min-width: @desktop-width) {
-        width: 78px;
-        height: 75px;
-        background-image: url("../img/icons/souvenir-desktop.svg");
-        background-size: 78px 75px;
-        margin: 1px 4px 25px 0;
+        background-size: 96px 80px;
+        margin: 2px 4px 21px 0;
       }
     }
   }
@@ -123,13 +108,13 @@
 
   &--food {
     @media (min-width: @desktop-width) {
-      margin: 0 0 19px;
+      margin: 0 0 23px;
     }
   }
 
   &--souvenir {
     @media (min-width: @tablet-width) {
-      margin: 0 0 18px;
+      margin: 0 0 24px;
     }
 
     @media (min-width: @desktop-width) {

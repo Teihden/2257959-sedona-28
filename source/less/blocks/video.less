@@ -16,11 +16,12 @@
 
 .video__heading {
   display: block;
-  margin: 0 0 27px;
+  margin: 0 auto 27px;
+  max-width: 465px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
   }
 }
 
@@ -38,6 +39,16 @@
   }
 }
 
+.video__link {
+  display: block;
+  max-width: 648px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 800px;
+  }
+}
+
 .video__picture {
   position: relative;
   display: block;
@@ -45,7 +56,6 @@
   &::after {
     content: "";
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
     right: 0;
@@ -53,11 +63,24 @@
     margin: auto;
     width: 48px;
     height: 54px;
-    background-image: url("../img/icons/play.svg");
-    background-color: transparent;
-    background-size: 48px 54px;
-    background-position: center;
-    background-repeat: no-repeat;
+    mask-image: url("../img/stack.svg#play");
+    background-color: @white;
+    opacity: 0.7;
+    mask-size: 48px 54px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.9;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 1;
+    }
   }
 }
 

@@ -15,7 +15,7 @@
     }
 
     .site-navigation__button-toggle {
-      background-image: url("../img/icons/menu-to-open.svg");
+      background-image: url("../img/stack.svg#menu-to-open");
       background-size: 23px 22px;
     }
   }
@@ -28,21 +28,23 @@
     }
 
     .site-navigation__button-toggle {
-      background-image: url("../img/icons/menu-to-close.svg");
+      background-image: url("../img/stack.svg#menu-to-close");
       background-size: 22px 22px;
     }
   }
 }
 
-.site-navigation--nojs {
-  .site-navigation__list {
-    position: static;
-    display: flex;
-    margin-top: 50px;
-  }
+@media (max-width: @mobile-width-only) {
+  .site-navigation--nojs {
+    .site-navigation__list {
+      position: static;
+      display: flex;
+      margin-top: 50px;
+    }
 
-  .site-navigation__button-toggle {
-    display: none;
+    .site-navigation__button-toggle {
+      display: none;
+    }
   }
 }
 
@@ -81,15 +83,14 @@
   .button-default();
   position: absolute;
   z-index: 20;
-  top: 17px;
-  right: 20px;
-  width: 23px;
-  height: 22px;
+  top: 4px;
+  right: 8px;
+  width: 48px;
+  height: 48px;
   background-position: center;
   background-repeat: no-repeat;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.6;
   }
 
