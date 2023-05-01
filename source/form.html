@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Личный проект «Седона» от HTML Academy">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -16,6 +16,7 @@
 
 <body>
   <header class="page-header">
+    <!-- Классы site-navigation--closed / site-navigation--opened переключают состояния меню и внешний вид кнопки. -->
     <nav class="page-header__navigation site-navigation site-navigation--closed site-navigation--nojs">
       <a class="site-navigation__logo page-logo" href="index.html">
         <img class="page-logo__image" src="img/logos/city-of-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
@@ -188,7 +189,7 @@
 
   <section class="modal modal--closed" id="modal-failure">
     <div class="modal__failure">
-      <h2 class="modal__heading heading">Что-то пошло <br class="break break--tablet">не так!</h2>
+      <h2 class="modal__heading heading">Что-то пошло&nbsp;<br class="break break--tablet">не так!</h2>
       <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__button modal__button--failure button" type="button">ОК</button>
     </div>
@@ -205,7 +206,7 @@
       </div>
     </div>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
