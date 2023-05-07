@@ -44,6 +44,19 @@
   max-width: 648px;
   margin: 0 auto;
 
+  &:hover,
+  &:focus {
+    .video__picture::after {
+      opacity: 0.9;
+    }
+  }
+
+  &:active {
+    .video__picture::after {
+      opacity: 1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     max-width: 800px;
   }
@@ -69,18 +82,6 @@
     mask-size: 48px 54px;
     mask-position: center;
     mask-repeat: no-repeat;
-  }
-
-  &:hover {
-    &::after {
-      opacity: 0.9;
-    }
-  }
-
-  &:active {
-    &::after {
-      opacity: 1;
-    }
   }
 }
 

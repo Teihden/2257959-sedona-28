@@ -18,7 +18,7 @@ const browser = browsersync.create();
 
 // CSS
 export const css = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+  return gulp.src('source/less/styles.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -26,16 +26,21 @@ export const css = () => {
       csso(),
     ]))
     .pipe(rename(function (path) {
-      path.extname = ".min.css";
+      path.extname = '.min.css';
     }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
 // HTML
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeAttributeQuotes: true,
+      removeComments: true,
+      useShortDoctype: true,
+    }))
     .pipe(gulp.dest('build'));
 }
 
@@ -45,12 +50,11 @@ const scripts = () => {
     .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(rename(function (path) {
-      path.extname = ".min.js";
+      path.extname = '.min.js';
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('build/js'));
 }
-
 
 // Images
 const optimizeImages = () => {
@@ -162,8 +166,8 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   gulp.parallel(
-    createWebp,
     copyImages,
+    createWebp,
     copy,
     css,
     html,
