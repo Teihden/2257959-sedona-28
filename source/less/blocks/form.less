@@ -151,19 +151,19 @@
   clear: both;
 
   &--impression {
-    @media (min-width: @tablet-width) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: repeat(2, 1fr) auto;
+      grid-template-columns: repeat(2, 280px) 1fr;
       gap: 28px;
     }
   }
 
   &--sights {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
     @media (min-width: @tablet-width) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
       gap: 16px 32px;
     }
 
@@ -241,6 +241,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    column-gap: 20px;
     grid-column: 1 / -1;
     max-width: none;
     padding: 0 0 64px;
