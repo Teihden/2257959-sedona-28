@@ -66,7 +66,7 @@
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/foreign-lands-desktop@1x.webp 1x, img/catalog/foreign-lands-desktop@2x.webp 2x" width="1200" height="400">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/foreign-lands-tablet@1x.webp 1x, img/catalog/foreign-lands-tablet@2x.webp 2x" width="648" height="400">
-                <source type="image/webp" srcset="img/catalog/foreign-lands-mobile@1x.webp 1x, img/catalog/foreign-lands-mobile@2x.webp 2x" width="280" height="280" >
+                <source type="image/webp" srcset="img/catalog/foreign-lands-mobile@1x.webp 1x, img/catalog/foreign-lands-mobile@2x.webp 2x" width="280" height="280">
                 <source media="(min-width: 1200px)" srcset="img/catalog/foreign-lands-desktop@1x.jpg 1x, img/catalog/foreign-lands-desktop@2x.jpg 2x" width="1200" height="400">
                 <source media="(min-width: 768px)" srcset="img/catalog/foreign-lands-tablet@1x.jpg 1x, img/catalog/foreign-lands-tablet@2x.jpg 2x" width="648" height="400">
                 <img class="photo__image photo__image--top" src="img/catalog/foreign-lands-mobile@1x.jpg" srcset="img/catalog/foreign-lands-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы.">
@@ -161,16 +161,21 @@
       <div class="media__video video">
         <b class="video__heading heading">Все еще сомневаетесь?</b>
         <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <a class="video__link" href="#no_scroll">
-          <picture class="video__picture">
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.webp 1x, img/catalog/video-desktop@2x.webp 2x" width="800" height="500">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.webp 1x, img/catalog/video-tablet@2x.webp 2x" width="648" height="500">
-            <source type="image/webp" srcset="img/catalog/video-mobile@1x.webp 1x, img/catalog/video-mobile@2x.webp 2x" width="280" height="177">
-            <source media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" width="800" height="500">
-            <source media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.jpg 1x, img/catalog/video-tablet@2x.jpg 2x" width="648" height="500">
-            <img class="video__image" src="img/catalog/video-mobile@1x.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" width="280" height="177" loading="lazy" alt="Видео о Седоне.">
-          </picture>
-        </a>
+        <div class="video__container">
+          <a class="video__link" href="#no_scroll">
+            <picture class="video__picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.webp 1x, img/catalog/video-desktop@2x.webp 2x" width="800" height="500">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.webp 1x, img/catalog/video-tablet@2x.webp 2x" width="648" height="500">
+              <source type="image/webp" srcset="img/catalog/video-mobile@1x.webp 1x, img/catalog/video-mobile@2x.webp 2x" width="280" height="177">
+              <source media="(min-width: 1200px)" srcset="img/catalog/video-desktop@1x.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" width="800" height="500">
+              <source media="(min-width: 768px)" srcset="img/catalog/video-tablet@1x.jpg 1x, img/catalog/video-tablet@2x.jpg 2x" width="648" height="500">
+              <img class="video__image" src="img/catalog/video-mobile@1x.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" width="280" height="177" loading="lazy" alt="Видео о Седоне.">
+            </picture>
+          </a>
+          <button class="video__button" type="button">
+            <span class="visually-hidden">Смотреть видео.</span>
+          </button>
+        </div>
       </div>
     </section>
   </main>
@@ -197,13 +202,12 @@
       </li>
     </ul>
     <p class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy.">
         <span class="copyright__text">Разработано</span>
-        <svg class="copyright__logo" width="28" height="35" viewBox="0 0 28 35" fill="currentColor" role="img">
-          <path d="M14.65.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85L14.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
-        </svg>
+        <span class="visually-hidden">HTML Academy</span>
       </a>
     </p>
+
   </footer>
   <script src="js/script.min.js"></script>
 </body>
