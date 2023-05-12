@@ -211,10 +211,21 @@
       background-repeat: no-repeat;
     }
   }
+
+  &--disabled {
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
+
 
 .form__input {
   display: block;
+
+  &:disabled + .form__option {
+    opacity: 0.3;
+  }
 }
 
 .form__label {
